@@ -1,7 +1,7 @@
 networks:
   defaullt:
     external: true
-      name: roboshop
+    name: roboshop
 services:
   #docker run -d --name mongodb mongodb:1
   mongodb: 
