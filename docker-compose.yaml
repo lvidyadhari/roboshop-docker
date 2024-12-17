@@ -22,16 +22,15 @@ services:
 
   redis:
   image: redis
-
-
+  
   user:
-  image: user:v1
+  image: user:1
   depends_on: 
   - redis
   - mongodb
 
   cart:
-  image: cart:v1
+  image: cart:1
   depends_on: 
   - redis
   - catalogue
