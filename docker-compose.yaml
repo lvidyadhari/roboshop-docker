@@ -25,13 +25,13 @@ services:
 
 
   user:
-  image: user:1
+  image: user:v1
   depends_on: 
   - redis
   - mongodb
 
   cart:
-  image: cart:1
+  image: cart:v1
   depends_on: 
   - redis
   - catalogue
