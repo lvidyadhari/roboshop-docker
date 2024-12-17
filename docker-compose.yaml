@@ -5,33 +5,33 @@ networks:
 services:
   #docker run -d --name mongodb mongodb:1
   mongodb: 
-    image: mongodb:1
+    image: mongodb:v1
     
 
   catalogue: 
-    image: catalogue:1
+    image: catalogue:v1
     depends_on:
     - mongodb
     
   web:
-    image: web:1
+    image: web:v1
     ports: 
     - "80:80"
     depends_on:
     - catalogue
 
   redis:
-  image: redis:1
+  image: redis
 
 
   user:
-  image: user:1
+  image: user:v1
   depends_on: 
   - redis
   - mongodb
 
   cart:
-  image: cart:1
+  image: cart:v1
   depends_on: 
   - redis
   - catalogue
