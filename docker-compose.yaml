@@ -30,7 +30,7 @@ services:
     - mongodb
 
   cart:
-    image: cart:1
+    image:
     depends_on: 
     - redis
     - catalogue
